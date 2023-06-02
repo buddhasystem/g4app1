@@ -1,8 +1,0 @@
-/home/maxim/g4app1/build/CMakeFiles/install/strip.dir
-/home/maxim/g4app1/build/CMakeFiles/install/local.dir
-/home/maxim/g4app1/build/CMakeFiles/install.dir
-/home/maxim/g4app1/build/CMakeFiles/list_install_components.dir
-/home/maxim/g4app1/build/CMakeFiles/rebuild_cache.dir
-/home/maxim/g4app1/build/CMakeFiles/edit_cache.dir
-/home/maxim/g4app1/build/CMakeFiles/G4APP1.dir
-/home/maxim/g4app1/build/CMakeFiles/g4app1.dir
