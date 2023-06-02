@@ -151,8 +151,8 @@
 
  C- HOW TO RUN
 
-    - Execute exampleB1 in the 'interactive mode' with visualization:
-        % ./exampleB1
+    - Execute app1 in the 'interactive mode' with visualization:
+        % ./g4app1
       and type in the commands from run1.mac line by line:
         Idle> /control/verbose 2
         Idle> /tracking/verbose 1
