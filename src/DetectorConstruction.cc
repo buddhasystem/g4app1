@@ -104,14 +104,15 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   //
   // Shape 1
   //
-  G4Material* shape1_mat = nist->FindOrBuildMaterial("G4_A-150_TISSUE");
-  G4ThreeVector pos1 = G4ThreeVector(0, 2*cm, -7*cm);
+  G4Material* shape1_mat = nist->FindOrBuildMaterial("G4_Al");
+  G4ThreeVector pos1 = G4ThreeVector(0, 0*cm, -7*cm);
 
   // Conical section shape
   G4double shape1_rmina =  0.*cm, shape1_rmaxa = 0.5*cm;
   G4double shape1_rminb =  0.*cm, shape1_rmaxb = 4.*cm;
   G4double shape1_hz = 1.*cm;
   G4double shape1_phimin = 0.*deg, shape1_phimax = 360.*deg;
+
   auto solidShape1 = new G4Cons("Shape1", shape1_rmina, shape1_rmaxa, shape1_rminb, shape1_rmaxb,
     shape1_hz, shape1_phimin, shape1_phimax);
 
@@ -131,7 +132,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   //
   // Shape 2
   //
-  G4Material* shape2_mat = nist->FindOrBuildMaterial("G4_BONE_COMPACT_ICRU");
+  G4Material* shape2_mat = nist->FindOrBuildMaterial("G4_Fe");
   G4ThreeVector pos2 = G4ThreeVector(0, -1*cm, 7*cm);
 
   // Trapezoid shape

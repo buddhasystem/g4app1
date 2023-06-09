@@ -43,8 +43,7 @@
 namespace B1
 {
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-
+// --------------------------------------
 RunAction::RunAction()
 {
   // add new units for dose
@@ -65,8 +64,7 @@ RunAction::RunAction()
   accumulableManager->RegisterAccumulable(fEdep2);
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-
+// --------------------------------------
 void RunAction::BeginOfRunAction(const G4Run*)
 {
   // inform the runManager to save random number seed
@@ -78,8 +76,7 @@ void RunAction::BeginOfRunAction(const G4Run*)
 
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-
+// --------------------------------------
 void RunAction::EndOfRunAction(const G4Run* run)
 {
   G4int nofEvents = run->GetNumberOfEvent();
@@ -108,6 +105,7 @@ void RunAction::EndOfRunAction(const G4Run* run)
   //        run manager for multi-threaded mode.
   const auto generatorAction = static_cast<const PrimaryGeneratorAction*>(
     G4RunManager::GetRunManager()->GetUserPrimaryGeneratorAction());
+  
   G4String runCondition;
   if (generatorAction)
   {
@@ -134,12 +132,12 @@ void RunAction::EndOfRunAction(const G4Run* run)
   G4cout
      << G4endl
      << " The run consists of " << nofEvents << " "<< runCondition
-     << G4endl
-     << " Cumulated dose per run, in scoring volume : "
-     << G4BestUnit(dose,"Dose") << " rms = " << G4BestUnit(rmsDose,"Dose")
-     << G4endl
-     << "------------------------------------------------------------"
-     << G4endl
+    //  << G4endl
+    //  << " Cumulated dose per run, in scoring volume : "
+    //  << G4BestUnit(dose,"Dose") << " rms = " << G4BestUnit(rmsDose,"Dose")
+    //  << G4endl
+    //  << "------------------------------------------------------------"
+    //  << G4endl
      << G4endl;
 }
 
